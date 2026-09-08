@@ -26,5 +26,4 @@ jobs:
       - name: Run Maven tests
         run: mvn test
 
-      - name: Intentional failure
-        run: exit 1
+    
