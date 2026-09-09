@@ -36,7 +36,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Run Maven tests
-        run: mvn test -Dgroups=smoke
+        run: mvn test -Dgroups=${{ inputs.test_suite }}
 
 
       - name: Upload test reports
