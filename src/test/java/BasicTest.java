@@ -11,7 +11,7 @@ public class BasicTest {
 			System.out.println("Running Test on " +  environment);
 		}
 
-		@Test(groups = "Regression")
+		@Test(groups = "regression")
 		public void secondTest()
 		{
 			System.out.println("regression test");
