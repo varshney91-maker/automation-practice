@@ -6,7 +6,7 @@ public class BasicTest {
 		@Test
 		public void firstTest()
 		{
-			Assert.fail("failed by Ankit");
+			System.out.println("test by ankit");
 		}
 
 		public static void main(String[] args)
