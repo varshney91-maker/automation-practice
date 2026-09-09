@@ -19,13 +19,14 @@ on:
           - smoke
           - regression
   schedule:
-    - cron: '13 14 * * *'
+    - cron: '27 14 * * *'
 jobs:
   test:
     runs-on: ubuntu-latest
 
     env: 
       Environment : QA
+      TEST_GROUP: ${{ github.event_name == 'schedule' && 'regression' || (inputs.test_suite || 'smoke') }}
 
     steps:
       - name: Checkout code
@@ -38,7 +39,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Run Maven tests
-        run: mvn test -Dgroups=${{ inputs.test_suite || 'smoke' }}
+        run: mvn test -Dgroups=$TEST_GROUP
 
 
       - name: Upload test reports
