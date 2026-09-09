@@ -1,11 +1,12 @@
 import org.testng.annotations.Test;
+import org.testng.Assert;
 
 public class BasicTest {
 
 		@Test
 		public void firstTest()
 		{
-			System.out.println("Login Test - CI Execution");
+			Assert.fail("failed by Ankit");
 		}
 
 		public static void main(String[] args)
