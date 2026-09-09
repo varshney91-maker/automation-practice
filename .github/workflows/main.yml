@@ -18,6 +18,8 @@ on:
         options:
           - smoke
           - regression
+  schedule:
+    - cron: '59 13 * * *'
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -36,7 +38,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Run Maven tests
-        run: mvn test -Dgroups=${{ inputs.test_suite }}
+        run: mvn test -Dgroups=${{ inputs.test_suite || 'regression' }}
 
 
       - name: Upload test reports
