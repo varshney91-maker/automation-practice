@@ -15,6 +15,7 @@ jobs:
 
     env: 
       Environment : QA
+      Test_Password : ${{secrets.Test_Password}}
 
     steps:
       - name: Checkout code
