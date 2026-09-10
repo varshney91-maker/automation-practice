@@ -49,4 +49,11 @@ jobs:
           name: test-reports
           path: target/surefire-reports/
 
+  report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Report Job
+        run: echo "Generating Report"
+
     
