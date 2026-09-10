@@ -30,6 +30,7 @@ jobs:
     env: 
       Environment : QA
       TEST_GROUP: ${{ github.event_name == 'schedule' && 'regression' || (inputs.test_suite || 'smoke') }}
+      BROWSER: ${{ matrix.browser }}
 
     steps:
       - name: Checkout code
