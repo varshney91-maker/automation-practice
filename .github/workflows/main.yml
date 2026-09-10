@@ -50,6 +50,7 @@ jobs:
           path: target/surefire-reports/
 
   report:
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
