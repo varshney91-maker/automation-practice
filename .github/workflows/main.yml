@@ -43,7 +43,8 @@ jobs:
           distribution: 'temurin'
 
       - name: Show browser
-        run: echo "Running tests on browser: $BROWSER"
+        run: echo "Running tests on browser - $BROWSER"
+
 
       - name: Run Maven tests
         run: mvn test -Dgroups=$TEST_GROUP
