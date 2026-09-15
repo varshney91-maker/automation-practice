@@ -2,7 +2,7 @@ import org.testng.annotations.Test;
 
 public class BrowserTest {
 
-    @Test
+    @Test(groups = "smoke")
     public void openBrowser() {
         String browser = System.getenv("BROWSER");
 
